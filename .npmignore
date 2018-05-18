@@ -1,0 +1,5 @@
+*.ts
+*.json
+*.lock
+.gitignore
+.npmignore

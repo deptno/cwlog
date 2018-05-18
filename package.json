@@ -1,0 +1,55 @@
+{
+  "name": "aws-cwlog",
+  "version": "1.0.0",
+  "description": "Save aws cloudwatch logs to JSON",
+  "main": "index.js",
+  "bin": {
+    "cwlog": "cli.js",
+    "aws-cwlog": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deptno/aws-cwlog.git"
+  },
+  "author": {
+    "name": "Bonggyun Lee",
+    "email": "deptno@gmail.com",
+    "url": "bglee.me"
+  },
+  "license": "MIT",
+  "scripts": {
+    "release": "npm publish"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.241.1",
+    "clipboardy": "^1.2.3",
+    "filenamify": "^2.0.0",
+    "inquirer": "^5.2.0",
+    "meow": "^5.0.0",
+    "ora": "^2.1.0",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "@types/filenamify": "^2.0.1",
+    "@types/inquirer": "^0.0.41",
+    "@types/meow": "^4.0.1",
+    "@types/node": "^10.1.0",
+    "@types/ramda": "^0.25.28",
+    "typescript": "^2.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/deptno/aws-cwlog/issues"
+  },
+  "homepage": "https://github.com/deptno/aws-cwlog#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "aws",
+    "cloudwatch",
+    "cloudwatchlogs",
+    "logs",
+    "dump",
+    "json"
+  ]
+}
