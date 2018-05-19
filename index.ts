@@ -8,6 +8,8 @@ import {promisify} from 'util'
 import {list} from './lib/ui/question'
 import {fetching, writing} from './lib/ui/spinner'
 import * as clipboard from 'clipboardy'
+import * as dayjs from 'dayjs'
+import * as bytes from 'pretty-bytes'
 
 const program = meow(`
 	Usage
@@ -40,10 +42,30 @@ const {out, profile, region, tab = 2} = program.flags
 initializer(region)
 
 async function main() {
+  const humanDate = R.compose(R.invoker(1, 'format')('MM-DD.HH:mm:ss'), dayjs)
+  const devider = '  '
+
   try {
     const {a: group} = await list('Select log group', R.pluck('logGroupName', await logGroups()))
-    const {a: stream} = await list('Select log stream', R.pluck('logStreamName', R.prop('logStreams', await logStreams(group))))
+    const {a: streamLine} = await list(
+      'Select log stream',
+      R.compose(
+        R.map(
+          R.compose(
+            R.join(devider),
+            R.values,
+            R.evolve({
+              firstEventTimestamp: humanDate,
+              lastEventTimestamp : R.compose(R.concat('~  '), humanDate),
+              storedBytes        : R.compose(R.invoker(2, 'padStart')(8, ' '), bytes),
+              logStreamName      : R.identity
+            }))),
+        R.sortWith([R.descend(R.prop('firstEventTimestamp'))]),
+        R.project(['storedBytes', 'firstEventTimestamp', 'lastEventTimestamp', 'logStreamName']),
+        R.prop('logStreams')
+      )(await logStreams(group)))
 
+    const stream = R.head(R.takeLast(1, R.split(devider, streamLine)))
     const {events} = await R.tap(fetching, logAllEvents(group, stream))
     const output = JSON.stringify(events, null, parseInt(tab))
 

@@ -17,7 +17,11 @@ export async function logGroups() {
 
 export function logStreams(logGroupName) {
   try {
-    return cwlog.describeLogStreams({logGroupName}).promise()
+    return cwlog.describeLogStreams({
+      logGroupName,
+      orderBy: 'LastEventTime',
+      descending: true
+    }).promise()
   } catch (ex) {
     return {logStreams: []} as AWS.CloudWatchLogs.Types.DescribeLogStreamsResponse
   }

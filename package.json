@@ -1,6 +1,6 @@
 {
   "name": "aws-cwlog",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Save aws cloudwatch logs to JSON",
   "main": "index.js",
   "bin": {
@@ -23,10 +23,12 @@
   "dependencies": {
     "aws-sdk": "^2.241.1",
     "clipboardy": "^1.2.3",
+    "dayjs": "^1.6.2",
     "filenamify": "^2.0.0",
     "inquirer": "^5.2.0",
     "meow": "^5.0.0",
     "ora": "^2.1.0",
+    "pretty-bytes": "^5.0.0",
     "ramda": "^0.25.0"
   },
   "devDependencies": {

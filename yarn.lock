@@ -260,6 +260,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
+dayjs@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.6.2.tgz#e1fb7ca8a700c3ceec783589968a9a0c96352cf4"
+
 decamelize-keys@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/decamelize-keys/-/decamelize-keys-1.1.0.tgz#d171a87933252807eb3cb61dc1c1445d078df2d9"
@@ -586,6 +590,10 @@ path-type@^3.0.0:
 pify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
+
+pretty-bytes@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.0.0.tgz#6af1d7cc56c597a3b07db480797d6bfa78a3179e"
 
 pseudomap@^1.0.2:
   version "1.0.2"
