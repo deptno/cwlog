@@ -1,8 +1,9 @@
 # cwlog
+[![npm](https://img.shields.io/npm/dt/aws-cwlog.svg?style=for-the-badge)](https://www.npmjs.com/package/aws-cwlog)
 
 > Download AWS Cloudwatch Logs.
 
-![cwlog](asset/aws-cwlog.gif)
+![cwlog](https://github.com/deptno/cwlog/raw/master/asset/aws-cwlog.gif)
 
 GIF. Please wait a little. 🙏
 
