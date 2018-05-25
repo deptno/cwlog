@@ -1,6 +1,6 @@
 {
   "name": "aws-cwlog",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Save aws cloudwatch logs to JSON",
   "main": "index.js",
   "bin": {
