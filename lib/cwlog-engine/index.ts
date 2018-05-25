@@ -45,10 +45,11 @@ export async function logAllEvents(logGroupName: string, logStreamName: string, 
   const result = await logEvents(logGroupName, logStreamName, nextForwardToken)
 
   if (result.events.length === 0) {
-    return {...result, events}
+    return R.merge(result, {events})
   }
 
   //xxx: avoid rate limit(50/1m)
+  //fixme: need to improvement
   await new Promise(resolve => setTimeout(resolve, 900))
-  return logAllEvents(logGroupName, logStreamName, result.events, result.nextForwardToken)
+  return logAllEvents(logGroupName, logStreamName, events.concat(result.events), result.nextForwardToken)
 }

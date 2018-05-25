@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Fix: Events not accumulated
+
 ## 1.0.2
 
 - Order by `LastEventTime`
