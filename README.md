@@ -36,7 +36,12 @@ $ cwlog --help
 - Mac
 - Node v9.11.1
 
+
+## Related
+
+- [hosejs](https://github.com/deptno/hosejs) 🕵️ Alternative jq, for javascripter
+- [Post](https://medium.com/@deptno/aws-cwlog-터미널에서-클라우드와치-로그를-받아보자-aa5cb4bd2abc)
+
 ## License
 
 MIT @_@
-
