@@ -1,6 +1,6 @@
 {
   "name": "aws-cwlog",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Save aws cloudwatch logs to JSON",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deptno/aws-cwlog.git"
+    "url": "git+https://github.com/deptno/cwlog.git"
   },
   "author": {
     "name": "Bonggyun Lee",
@@ -40,9 +40,9 @@
     "typescript": "^2.8.3"
   },
   "bugs": {
-    "url": "https://github.com/deptno/aws-cwlog/issues"
+    "url": "https://github.com/deptno/cwlog/issues"
   },
-  "homepage": "https://github.com/deptno/aws-cwlog#readme",
+  "homepage": "https://github.com/deptno/cwlog#readme",
   "directories": {
     "lib": "lib"
   },
